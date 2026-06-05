@@ -6,7 +6,7 @@
 [![Streamlit App](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://huggingface.co/spaces/maryamshanabli/GenerZy)
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
 
-> **Every video game has an energy bar — why shouldn't your life have one**
+> **Every video game has an energy bar,  Why shouldn't your life have one**
 
 > 🏆 **1st Place Winner at the MotionSense AI Competition**
 
