@@ -1,18 +1,35 @@
-# MotionSense AI Project
+# ⚡ GenerZy · MotionSense AI Project
 
-## Project Overview
-This project is part of the **MotionSense AI Competition**, aimed at analyzing human activity data collected via smartphones and wearables. The goal is to classify activities (SEDENTARY, STANDING, ACTIVE) and provide insights for healthier lifestyle recommendations.
+<div align="center">
 
-**The project uses:**
-- Data preprocessing and feature engineering
-- Machine Learning models (Random Forest, Gradient Boosting, etc.)
-- Hyperparameter tuning and model evaluation
-- Python (NumPy, Pandas, Scikit-learn)
-- Streamlit for interface integration
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/maryamshanabli/GenerZy)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://huggingface.co/spaces/maryamshanabli/GenerZy)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
+
+> **Every video game has an energy bar — why shouldn't your life have one**
+
+> 🏆 **1st Place Winner at the MotionSense AI Competition**
+
+[🕹️ Launch Live Telemetry Demo on Hugging Face Spaces](https://huggingface.co/spaces/maryamshanabli/GenerZy)
+
+</div>
 
 ---
 
-## Folder Structure
+## 🚀 Project Overview
+
+GenerZy is an intelligent telemetry dashboard that transforms continuous smartphone and wearable sensor data into a live player energy matrix. By deploying optimized machine learning architectures, the system categorizes human movement patterns in real-time to gamify healthy habit loops and prevent prolonged physical stagnation.
+
+### 🛰️ Core Architecture
+
+- **Signal Feature Extraction:** Processes high-dimensional coordinate vectors from wearable biometric hardware
+- **Gradient Boosting Tree Matrix:** Executes instantaneous classification routines across trained multi-class boundaries
+- **Immersive Interface:** Built natively with Streamlit using custom cyber-grid stylistic configurations
+
+---
+
+## 📂 Repository Structure
+
 ```
 MotionSense_Project/
 │
@@ -27,9 +44,9 @@ MotionSense_Project/
 │   ├── y_test_app.npy
 │   └── final_features.csv
 │
-├── models/
+├── model/
 │   ├── best_gradient_boosting_model.joblib
-│   └── robust_scaler.joblib
+│   └── robust_scaler_final.joblib
 │
 ├── notebooks/
 │   └── MotionSense_Project.ipynb
@@ -40,86 +57,93 @@ MotionSense_Project/
 ├── requirements.txt
 └── README.md
 ```
+
 ---
 
-## Setup Instructions
+## 🛠️ Setup
 
-**1. Clone the repository**
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/<your-username>/<repository-name>.git
 cd <repository-name>
 ```
 
-**2. Create a virtual environment**
+### 2. Create a Virtual Environment
+
 ```bash
+# Linux / macOS
 python -m venv venv
-source venv/bin/activate   # Linux / Mac
-venv\Scripts\activate      # Windows
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
 ```
 
-**3. Install dependencies**
-```
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## Usage
+## 🎮 Running the Project
 
-**Run the Jupyter Notebook**
+### Jupyter Notebook
 
 ```bash
 jupyter notebook notebooks/MotionSense_Project.ipynb
 ```
-**Run the Streamlit App**
-```
+
+### Streamlit App (Local)
+
+```bash
 streamlit run app/app.py
 ```
 
 ---
 
-## Model Information
+## 🔬 Model Specifications
 
-•	**Best Model: Gradient Boosting Classifier**
+The classifier is an optimized **Gradient Boosting Classifier** reaching near-perfect validation accuracy.
 
-•	**Hyperparameters:**
-```
+| Metric | Value |
+| --- | --- |
+| **Validation Accuracy** | `0.9946` |
+| **Test Accuracy** | `0.9647` |
+
+```json
 {
+    "n_estimators": 500,
     "learning_rate": 0.2,
     "max_depth": 4,
-    "min_samples_split": 5,
-    "n_estimators": 500,
-    "subsample": 0.8
+    "subsample": 0.8,
+    "min_samples_split": 5
 }
 ```
-•	**Validation Accuracy: 0.9946**
-
-•	**Test Accuracy: 0.9647**
 
 ---
 
+## 📊 Top 10 Features by Importance
 
-## Feature Importance (Top 10)
 ```
-  1.	tBodyGyroJerk-std()-Y
-	2.	tGravityAcc-arCoeff()-Y,3
-	3.	fBodyAccJerk-entropy()-X
-	4.	fBodyAcc-bandsEnergy()-1,24.1
-	5.	tGravityAcc-mean()-Z
-	6.	tBodyGyroJerk-min()-X
-	7.	fBodyAcc-bandsEnergy()-1,24
-	8.	tBodyAccJerk-std()-X
-	9.	tBodyGyroJerk-mad()-Z
-	10.	angle(X,gravityMean)
+1   tBodyGyroJerk-std()-Y
+2   tGravityAcc-arCoeff()-Y,3
+3   fBodyAccJerk-entropy()-X
+4   fBodyAcc-bandsEnergy()-1,24.1
+5   tGravityAcc-mean()-Z
+6   tBodyGyroJerk-min()-X
+7   fBodyAcc-bandsEnergy()-1,24
+8   tBodyAccJerk-std()-X
+9   tBodyGyroJerk-mad()-Z
+10  angle(X,gravityMean)
 ```
 
 ---
 
-## Notes 
+## 🌐 Deployment
 
-- The data folder contains preprocessed and scaled features ready for modeling.
-- The models folder contains the trained Gradient Boosting model and scaler for feature preprocessing.
-- The app folder contains the Streamlit interface code (app.py) to run the demo.
-- requirements.txt contains all Python dependencies to replicate the environment.
-
----
+- Live demo hosted on [Hugging Face Spaces](https://huggingface.co/spaces/maryamshanabli/GenerZy)
+- Input features are automatically normalized via a Robust Scaler before classification
